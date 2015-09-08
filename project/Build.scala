@@ -16,7 +16,7 @@ object ProjectBuild extends Build {
       scalacOptions ++= Seq("-unchecked", "-deprecation", "-target:jvm-1.6", "-feature", "-language:_"),
       testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oF"),
       libraryDependencies ++= Seq(
-        "com.twitter" %% "algebird-core" % "0.10.2" % "compile",
+        "com.twitter" %% "algebird-core" % "0.11.0" % "compile",
         "org.apache.spark" %% "spark-core" % "1.4.1" % "provided",
         "org.scalatest" %% "scalatest" % "2.2.5" % "test"
       ),
