@@ -12,8 +12,8 @@ object ProjectBuild extends Build {
       version := "0.2.0-SNAPSHOT",
       scalaVersion := "2.10.4",
       crossScalaVersions := Seq("2.10.4", "2.11.7"),
-      javacOptions ++= Seq("-Xlint:unchecked", "-source", "1.6", "-target", "1.6"),
-      scalacOptions ++= Seq("-unchecked", "-deprecation", "-target:jvm-1.6", "-feature", "-language:_"),
+      javacOptions ++= Seq("-Xlint:unchecked", "-source", "1.7", "-target", "1.7"),
+      scalacOptions ++= Seq("-unchecked", "-deprecation", "-target:jvm-1.7", "-feature", "-language:_"),
       testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oF"),
       libraryDependencies ++= Seq(
         "com.twitter" %% "algebird-core" % "0.11.0" % "compile",
