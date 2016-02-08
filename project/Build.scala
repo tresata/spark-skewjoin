@@ -1,12 +1,12 @@
 import sbt._
 import sbt.Keys._
-import net.virtualvoid.sbt.graph.Plugin._
 
 object ProjectBuild extends Build {
   lazy val project = Project(
     id = "root",
-    base = file("."),
-    settings = Project.defaultSettings ++ graphSettings ++ Seq(
+    base = file(".")
+  ).settings(
+    Seq(
       organization := "com.tresata",
       name := "spark-skewjoin",
       version := "0.3.0-SNAPSHOT",
@@ -16,9 +16,9 @@ object ProjectBuild extends Build {
       scalacOptions ++= Seq("-unchecked", "-deprecation", "-target:jvm-1.7", "-feature", "-language:_"),
       testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oF"),
       libraryDependencies ++= Seq(
-        "com.twitter" %% "algebird-core" % "0.11.0" % "compile",
+        "com.twitter" %% "algebird-core" % "0.12.0" % "compile",
         "org.apache.spark" %% "spark-core" % "1.6.0" % "provided",
-        "org.scalatest" %% "scalatest" % "2.2.5" % "test"
+        "org.scalatest" %% "scalatest" % "2.2.6" % "test"
       ),
       publishMavenStyle := true,
       pomIncludeRepository := { x => false },
