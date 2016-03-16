@@ -17,7 +17,7 @@ object ProjectBuild extends Build {
       testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oF"),
       libraryDependencies ++= Seq(
         "com.twitter" %% "algebird-core" % "0.12.0" % "compile",
-        "org.apache.spark" %% "spark-core" % "1.6.0" % "provided",
+        "org.apache.spark" %% "spark-core" % "1.6.1" % "provided",
         "org.scalatest" %% "scalatest" % "2.2.6" % "test"
       ),
       publishMavenStyle := true,
