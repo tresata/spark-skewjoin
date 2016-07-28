@@ -10,14 +10,14 @@ object ProjectBuild extends Build {
       organization := "com.tresata",
       name := "spark-skewjoin",
       version := "0.4.0-SNAPSHOT",
-      scalaVersion := "2.11.7",
-      crossScalaVersions := Seq("2.10.5", "2.11.7"),
+      scalaVersion := "2.11.8",
+      crossScalaVersions := Seq("2.10.6", "2.11.8"),
       javacOptions ++= Seq("-Xlint:unchecked", "-source", "1.7", "-target", "1.7"),
       scalacOptions ++= Seq("-unchecked", "-deprecation", "-target:jvm-1.7", "-feature", "-language:_"),
       testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oF"),
       libraryDependencies ++= Seq(
-        "com.twitter" %% "algebird-core" % "0.12.0" % "compile",
-        "org.apache.spark" %% "spark-core" % "1.6.1" % "provided",
+        "com.twitter" %% "algebird-core" % "0.12.1" % "compile",
+        "org.apache.spark" %% "spark-core" % "2.0.0" % "provided",
         "org.scalatest" %% "scalatest" % "2.2.6" % "test"
       ),
       publishMavenStyle := true,
