@@ -9,7 +9,7 @@ lazy val root = (project in file(".")).settings(
   testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oF"),
   libraryDependencies ++= Seq(
     "com.twitter" %% "algebird-core" % "0.12.3" % "compile",
-    "org.apache.spark" %% "spark-core" % "2.0.0" % "provided",
+    "org.apache.spark" %% "spark-core" % "2.1.0" % "provided",
     "org.scalatest" %% "scalatest" % "2.2.6" % "test"
   ),
   publishMavenStyle := true,
