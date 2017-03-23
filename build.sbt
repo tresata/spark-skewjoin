@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).settings(
   scalacOptions ++= Seq("-unchecked", "-deprecation", "-target:jvm-1.7", "-feature", "-language:_"),
   testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oF"),
   libraryDependencies ++= Seq(
-    "com.twitter" %% "algebird-core" % "0.12.3" % "compile",
+    "com.twitter" %% "algebird-core" % "0.13.0" % "compile",
     "org.apache.spark" %% "spark-core" % "2.1.0" % "provided",
     "org.scalatest" %% "scalatest" % "2.2.6" % "test"
   ),
