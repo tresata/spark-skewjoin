@@ -10,7 +10,7 @@ lazy val root = (project in file(".")).settings(
   libraryDependencies ++= Seq(
     "com.twitter" %% "algebird-core" % "0.13.0" % "compile",
     "org.apache.spark" %% "spark-core" % "2.1.0" % "provided",
-    "org.scalatest" %% "scalatest" % "2.2.6" % "test"
+    "org.scalatest" %% "scalatest" % "3.0.3" % "test"
   ),
   publishMavenStyle := true,
   pomIncludeRepository := { x => false },
